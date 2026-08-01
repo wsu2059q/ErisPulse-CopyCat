@@ -28,6 +28,14 @@ class Main(BaseModule):
             priority=0
         )
 
+    @staticmethod
+    def _extract_text(ev: Event) -> str:
+        parts = []
+        for segment in ev.get_message():
+            if segment.get("type") == "text":
+                parts.append(segment.get("data", {}).get("text", ""))
+        return "".join(parts)
+
     async def on_load(self, event):
         @message.on_message()
         async def repeat_handler(ev: Event):
@@ -36,7 +44,7 @@ class Main(BaseModule):
             if ev.get_user_id() == ev.get_self_user_id():
                 return
 
-            text = ev.get_text()
+            text = self._extract_text(ev)
             if not text:
                 return
 

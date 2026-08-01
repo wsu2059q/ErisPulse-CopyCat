@@ -1,6 +1,6 @@
 [project]
 name = "ErisPulse-CopyCat"
-version = "1.0.0"
+version = "1.0.1"
 description = "复读机模块 - 检测群聊/私聊中连续重复消息并自动复读（同一条消息仅复读一次）"
 readme = "README.md"
 requires-python = ">=3.10"
