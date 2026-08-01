@@ -1,5 +1,5 @@
 # CopyCat — 复读机模块
-> 由 https://www.erisdev.com/#builder 模块构建器全权生成
+> 由 https://builder.erisdev.com 模块构建器全权生成
 
 检测群聊/私聊中连续重复消息，当同一消息被不同人连续发送 **2 次（含）以上**时自动复读。  
 **同一条消息仅复读一次**，不会重复刷屏。
